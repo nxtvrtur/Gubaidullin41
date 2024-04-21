@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gubaidullin41size"
         mc:Ignorable="d"
-        Title="41 размер" Icon="pages/res/icon.ico" FontFamily="Comic Sans MS" MinHeight="200" MinWidth="200" Height="450" Width="800">
+        Title="41 размер" Icon="pages/res/icon.ico" FontFamily="Comic Sans MS" MinHeight="200" MinWidth="200" Height="550" Width="800">
     <Grid >
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
@@ -15,6 +15,6 @@
         <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"></Frame>
         <Image Source="pages/res/logo.png" HorizontalAlignment="Left" Margin="20,0,0,0" Height="50" Width="85" VerticalAlignment="Center"></Image>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="40" Text="41 размер"></TextBlock>
-        <Button x:Name="BtnBack" HorizontalAlignment="Right" Visibility="Hidden" Grid.Column="1" Grid.ColumnSpan="4" Content="Назад" Click="Button_Click_1"></Button>
+        <Button x:Name="BtnBack" HorizontalAlignment="Right" Visibility="Hidden" Grid.Column="1" Grid.ColumnSpan="4" Margin="10" Content="Назад" Click="Button_Click_1"></Button>
     </Grid>
 </Window>

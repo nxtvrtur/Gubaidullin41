@@ -26,3 +26,5 @@ C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Debug\Gubaidullin41size_Content
 C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Debug\Gubaidullin41size.csproj.CopyComplete
 C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Debug\Pages\AuthPage.g.cs
 C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Debug\Pages\AuthPage.baml
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Debug\Windows\OrderWindow.g.cs
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Debug\Windows\OrderWindow.baml

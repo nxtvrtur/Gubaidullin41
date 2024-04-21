@@ -13,21 +13,19 @@ namespace Gubaidullin41size
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Gubaidullin41Entities : DbContext
+    public partial class Gubaidullin41Entities1 : DbContext
     {
-        private static Gubaidullin41Entities _context { get; set; }
-
-        public static Gubaidullin41Entities GetContext()
+        public static Gubaidullin41Entities1 _context { get; set; }
+        public static Gubaidullin41Entities1 GetContext()
         {
             if (_context == null)
             {
-                _context = new Gubaidullin41Entities();
+                _context = new Gubaidullin41Entities1();
             }
             return _context;
         }
-
-        public Gubaidullin41Entities()
-            : base("name=Gubaidullin41Entities")
+        public Gubaidullin41Entities1()
+            : base("name=Gubaidullin41Entities1")
         {
         }
     

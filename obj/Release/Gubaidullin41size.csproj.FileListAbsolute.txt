@@ -1,0 +1,10 @@
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\Gubaidullin41size.csproj.AssemblyReference.cache
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\MainWindow.g.cs
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\Pages\AddEditPage.g.cs
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\Pages\AuthPage.g.cs
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\Pages\ProductPage.g.cs
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\Windows\OrderWindow.g.cs
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\App.g.cs
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\Gubaidullin41size_Content.g.cs
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\Gubaidullin41size_MarkupCompile.cache
+C:\Users\User\Study\РПМ\Gubaidullin41size\obj\Release\Gubaidullin41size_MarkupCompile.lref

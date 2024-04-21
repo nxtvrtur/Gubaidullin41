@@ -24,8 +24,10 @@
             <TextBox Height="30" Margin="5" x:Name="LoginTextBlock"></TextBox>
             <TextBlock Margin="5" Text="Пароль"></TextBlock>
             <PasswordBox Height="30" PasswordChar="*" Margin="5" x:Name="PasswordTextBlock"></PasswordBox>
+            <TextBlock Height="30" Margin="5" x:Name="PasswordTextBlock2"></TextBlock>
         </StackPanel>
-        <Button x:Name="GuestBtn" Click="GuestBtn_Click" Grid.Column="1" Grid.Row="2" Margin="5 20 0 0" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="150" Height="50" Content="Войти как гость" FontSize="15"></Button>
-        <Button x:Name="SignInBtn" Click="SignInBtn_Click"  Grid.Column="1" Grid.Row="2" Margin="0 20 5 0" HorizontalAlignment="Right" VerticalAlignment="Top"  Width="150" Height="50" Content="Войти" FontSize="15"></Button>
+        <Button Opacity="100" x:Name="GuestBtn" Click="GuestBtn_Click" Grid.Column="1" Grid.Row="2" Margin="5 20 0 0" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="150" Height="50" Content="Войти как гость" FontSize="15"></Button>
+        <Button Opacity="100" x:Name="SignInBtn" Click="SignInBtn_Click"  Grid.Column="1" Grid.Row="2" Margin="0 20 5 0" HorizontalAlignment="Right" VerticalAlignment="Top"  Width="150" Height="50" Content="Войти" FontSize="15"></Button>
+        <Button Opacity="0" Click="RegisterBtn_Click" x:Name="RegisterBtn" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="1" Content="Зарегистрироваться" FontSize="14" ></Button>
     </Grid>
 </Page>

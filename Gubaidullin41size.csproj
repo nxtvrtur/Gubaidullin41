@@ -64,34 +64,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="GubaidullinModel.cs">
+    <Compile Include="Gubaidullin41.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GubaidullinModel.tt</DependentUpon>
+      <DependentUpon>Gubaidullin41.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gubaidullin41.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gubaidullin41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gubaidullin41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Gubaidullin41.edmx</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
-      <DependentUpon>GubaidullinModel.tt</DependentUpon>
+      <DependentUpon>Gubaidullin41.tt</DependentUpon>
     </Compile>
     <Compile Include="OrderProduct.cs">
-      <DependentUpon>GubaidullinModel.tt</DependentUpon>
+      <DependentUpon>Gubaidullin41.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="PickUpPoint.cs">
-      <DependentUpon>GubaidullinModel.tt</DependentUpon>
+      <DependentUpon>Gubaidullin41.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>GubaidullinModel.tt</DependentUpon>
+      <DependentUpon>Gubaidullin41.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
-      <DependentUpon>GubaidullinModel.tt</DependentUpon>
+      <DependentUpon>Gubaidullin41.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>GubaidullinModel.tt</DependentUpon>
+      <DependentUpon>Gubaidullin41.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>GubaidullinModel.tt</DependentUpon>
+      <DependentUpon>Gubaidullin41.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OrderWindow.xaml.cs">
+      <DependentUpon>OrderWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -100,16 +113,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="GubaidullinModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GubaidullinModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GubaidullinModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>GubaidullinModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Manager.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -125,6 +128,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ProductPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OrderWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,12 +160,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="GubaidullinModel.edmx">
+    <EntityDeploy Include="Gubaidullin41.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GubaidullinModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Gubaidullin41.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="GubaidullinModel.edmx.diagram">
-      <DependentUpon>GubaidullinModel.edmx</DependentUpon>
+    <None Include="Gubaidullin41.edmx.diagram">
+      <DependentUpon>Gubaidullin41.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -172,7 +179,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Windows\" />
+    <Content Include="Gubaidullin41.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Gubaidullin41.edmx</DependentUpon>
+      <LastGenOutput>Gubaidullin41.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Gubaidullin41.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Gubaidullin41.edmx</DependentUpon>
+      <LastGenOutput>Gubaidullin41.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pages\Res\icon.ico" />
@@ -187,16 +203,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GubaidullinModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GubaidullinModel.edmx</DependentUpon>
-      <LastGenOutput>GubaidullinModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="GubaidullinModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GubaidullinModel.edmx</DependentUpon>
-      <LastGenOutput>GubaidullinModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="Pages\Res\B320R5.jpg" />
     <Resource Include="Pages\Res\D329H3.jpg" />
     <Resource Include="Pages\Res\D572U8.jpg" />

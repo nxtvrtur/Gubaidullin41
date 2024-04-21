@@ -33,7 +33,25 @@ namespace Gubaidullin41size
         public string ProductDescription { get; set; }
         public string ProductPhoto { get; set; }
         public string ProductStatus { get; set; }
-    
+        public int Quantity { get; set; }
+
+        public int inStock
+        {
+            get
+            {
+
+                int stock = ProductQuantityInStock - Quantity;
+                if (stock < 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return stock;
+                }
+            }
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }
     }

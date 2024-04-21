@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Gubaidullin41size.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="41 размер" FontFamily="Comic Sans MS">
@@ -20,13 +19,14 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0" Orientation="Horizontal">
             <TextBlock Margin="5" FontSize="18" VerticalAlignment="Center" Text="Поиск"></TextBlock>
             <TextBox TextChanged="SearchTBox_TextChanged" TextAlignment="Left" Name="SearchTBox" FontSize="20" Margin="10 0 0 0" Width="150" Height="30"></TextBox>
         </StackPanel>
         <StackPanel Margin="10" Orientation="Horizontal" Grid.Column="1" Grid.ColumnSpan="2">
-            <TextBlock FontSize="15" Text="Фильтр по скидке"></TextBlock>
+            <TextBlock FontSize="15" HorizontalAlignment="Left" Text="Фильтр по скидке"></TextBlock>
             <ComboBox SelectionChanged="ComboType_SelectionChanged" Name="ComboType" Width="150" Height="30" Margin="10 0 0 0" Grid.ColumnSpan="2">
                 <ComboBoxItem>Все</ComboBoxItem>
                 <ComboBoxItem>от 0-9,99%</ComboBoxItem>
@@ -34,17 +34,22 @@
                 <ComboBoxItem>от 15% и более</ComboBoxItem>
             </ComboBox>
         </StackPanel>
-        <StackPanel Orientation="Vertical" Margin="40 0 0 0" VerticalAlignment="Center" Grid.Row="1" Grid.Column="2" >
-            <RadioButton Checked="UpRadioBtn_Checked" Name="UpRadioBtn" Margin="0 0 5 0">по возрастанию стоимости</RadioButton>
-            <RadioButton Checked="DownRadioBtn_Checked" Name="DownRadioBtn" Grid.Column="3" Grid.Row="1" Margin="0 0 10 0">по убыванию стоимости</RadioButton>
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Margin="10 0 0 0" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" >
+            <RadioButton FontSize="15" Checked="UpRadioBtn_Checked" Name="UpRadioBtn" Margin="0 0 5 0">по возрастанию стоимости</RadioButton>
+            <RadioButton FontSize="15" Checked="DownRadioBtn_Checked" Name="DownRadioBtn" Grid.Column="2" Grid.Row="1" Margin="0 0 0 0">по убыванию стоимости</RadioButton>
         </StackPanel>
-        <TextBlock Margin="5" x:Name="UserNameTextBlock" Grid.Row="1"></TextBlock>
-        <TextBlock Margin="5" x:Name="RoleTextBlock" Grid.Row="2"></TextBlock>
+        <TextBlock FontSize="15" Margin="5" x:Name="UserNameTextBlock" Grid.Row="1"></TextBlock>
+        <TextBlock FontSize="15" Margin="5" x:Name="RoleTextBlock" Grid.Row="2"></TextBlock>
         <StackPanel Margin="5" Orientation="Horizontal" Grid.Row="3">
-            <TextBlock x:Name="CountTextBlock"></TextBlock>
+            <TextBlock FontSize="15" x:Name="CountTextBlock"></TextBlock>
         </StackPanel>
  
-        <ListView Name="ProductListView" Grid.Row="4" Grid.RowSpan="3" Grid.ColumnSpan="3">
+        <ListView Name="ProductListView" Grid.Row="4" Grid.ColumnSpan="3">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Добавить к заказу" Name="AddToOrderBtn" Click="AddToOrderBtn_Click"></MenuItem>
+                </ContextMenu>
+            </ListView.ContextMenu>
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -88,6 +93,6 @@
                </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+        <Button Visibility="Hidden" Grid.Row="5" Content="Заказ" Height="40" HorizontalAlignment="Right" Margin="5" Name="OrderBtn" Click="OrderBtn_Click" Grid.Column="2"  VerticalAlignment="Center"></Button>
     </Grid>
 </Page>
